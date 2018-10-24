@@ -1,0 +1,17 @@
+file:
+  /etc/os-release:
+    # required attributes
+    exists: true
+    # optional attributes
+    contains:
+    - 3.7
+
+command:
+  goss --version :
+    # required attributes
+    exit-status: 0
+    # optional attributes
+    stderr: []
+    stdout:
+    - goss version v0.3.6
+    timeout: 10000 # in milliseconds
